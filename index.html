@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мобильное мошенничество: защита для пожилых людей</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Мобильное мошенничество</h1>
+            <p class="subtitle">Как защититься пожилым людям от обмана по телефону</p>
+            <button id="themeToggle" class="theme-btn">
+                <i class="fas fa-moon"></i>
+            </button>
+        </div>
+    </header>
+    
+    <main class="container">
+        <section class="intro">
+            <p>С развитием технологий мошенники придумывают всё новые способы обмана, и особенно уязвимыми становятся люди пожилого возраста.</p>
+            <p>Каждый год <span class="highlight">тысячи пожилых людей</span> становятся жертвами телефонных мошенников, теряя свои сбережения и доверие к окружающим.</p>
+            <p>Этот сайт создан, чтобы помочь вам распознать обман и защитить себя от преступников.</p>
+        </section>
+        
+        <div class="stats-counter">
+            <div class="stat">
+                <span id="victimsCount">0</span>
+                <p>жертв ежегодно</p>
+            </div>
+            <div class="stat">
+                <span id="moneyLost">0</span>
+                <p>рублей похищено</p>
+            </div>
+            <div class="stat">
+                <span id="scamsCount">0</span>
+                <p>видов мошенничества</p>
+            </div>
+        </div>
+        
+        <h2 class="section-title">Распространённые схемы мошенничества</h2>
+        
+        <div class="scams-grid" id="scamsContainer">
+            <!-- Скам-карточки будут добавлены через JavaScript -->
+        </div>
+        
+        <h2 class="section-title">Как защитить себя от мошенников</h2>
+        
+        <div class="protection-list">
+            <ul id="protectionList">
+                <!-- Элементы защиты будут добавлены через JavaScript -->
+            </ul>
+        </div>
+        
+        <div class="quiz-section">
+            <h3>Проверьте свои знания</h3>
+            <div id="quizQuestion"></div>
+            <div id="quizOptions"></div>
+            <button id="nextQuestion" class="btn">Следующий вопрос</button>
+            <div id="quizResult"></div>
+        </div>
+        
+        <div class="important-box">
+            <h3><i class="fas fa-exclamation-triangle"></i> Важно помнить!</h3>
+            <p>Если вы всё же перевели деньги мошенникам, немедленно позвоните в банк по номеру, указанному на обратной стороне вашей карты. Возможно, операцию удастся отменить. Также обязательно обратитесь в полицию.</p>
+            <button id="reportScam" class="btn">Сообщить о мошенничестве</button>
+        </div>
+        
+        <h2 class="section-title">Куда обращаться за помощью</h2>
+        
+        <div class="contact-info" id="contactsContainer">
+            <!-- Контакты будут добавлены через JavaScript -->
+        </div>
+        
+        <div class="emergency-call">
+            <button id="emergencyBtn" class="emergency-btn">
+                <i class="fas fa-phone-alt"></i> Экстренный вызов: 112
+            </button>
+        </div>
+    </main>
+    
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-text">
+                <p>© 2023 Защита от мобильного мошенничества. Этот сайт создан для информирования пожилых людей о способах защиты от телефонных мошенников.</p>
+                <p>Поделитесь этой информацией с друзьями и родными — вместе мы сможем противостоять мошенникам!</p>
+            </div>
+            <div class="social-links">
+                <button class="share-btn" data-platform="whatsapp"><i class="fab fa-whatsapp"></i></button>
+                <button class="share-btn" data-platform="telegram"><i class="fab fa-telegram"></i></button>
+                <button class="share-btn" data-platform="vkontakte"><i class="fab fa-vk"></i></button>
+                <button class="share-btn" onclick="window.print()"><i class="fas fa-print"></i></button>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Модальное окно для сообщения о мошенничестве -->
+    <div id="reportModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h3>Сообщить о мошенничестве</h3>
+            <form id="reportForm">
+                <div class="form-group">
+                    <label for="scamType">Тип мошенничества:</label>
+                    <select id="scamType" required>
+                        <option value="">Выберите тип</option>
+                        <option value="phone">Телефонное мошенничество</option>
+                        <option value="bank">Мошенничество от имени банка</option>
+                        <option value="relative">Мнимый родственник</option>
+                        <option value="prize">Ложный выигрыш</option>
+                        <option value="other">Другое</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="phoneNumber">Номер телефона мошенника (если известен):</label>
+                    <input type="tel" id="phoneNumber" placeholder="+7 (XXX) XXX-XX-XX">
+                </div>
+                <div class="form-group">
+                    <label for="description">Описание ситуации:</label>
+                    <textarea id="description" rows="4" placeholder="Опишите, что произошло..." required></textarea>
+                </div>
+                <button type="submit" class="btn submit-btn">Отправить сообщение</button>
+            </form>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
