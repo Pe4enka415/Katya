@@ -1,0 +1,201 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f5f9ff;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background: linear-gradient(to right, #1a5fb4, #2d7bc9);
+    color: white;
+    padding: 1.5rem 0;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    font-weight: 300;
+}
+
+main {
+    padding: 2rem 0;
+}
+
+.intro {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+    margin-bottom: 2rem;
+}
+
+.intro p {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.highlight {
+    color: #e63946;
+    font-weight: bold;
+}
+
+.section-title {
+    color: #1a5fb4;
+    border-bottom: 2px solid #1a5fb4;
+    padding-bottom: 0.5rem;
+    margin: 2rem 0 1.5rem 0;
+    font-size: 1.8rem;
+}
+
+.scams-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.scam-card {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+}
+
+.scam-card:hover {
+    transform: translateY(-5px);
+}
+
+.scam-icon {
+    background-color: #1a5fb4;
+    color: white;
+    font-size: 2rem;
+    text-align: center;
+    padding: 1rem;
+}
+
+.scam-content {
+    padding: 1.5rem;
+}
+
+.scam-title {
+    color: #1a5fb4;
+    margin-bottom: 0.8rem;
+    font-size: 1.3rem;
+}
+
+.protection-list {
+    background-color: #e8f4ff;
+    padding: 2rem;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+}
+
+.protection-list ul {
+    list-style-type: none;
+}
+
+.protection-list li {
+    padding: 0.8rem 0;
+    padding-left: 2.5rem;
+    position: relative;
+    font-size: 1.1rem;
+}
+
+.protection-list li:before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #1a5fb4;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.important-box {
+    background-color: #fff3cd;
+    border-left: 5px solid #ffc107;
+    padding: 1.5rem;
+    margin: 2rem 0;
+    border-radius: 0 5px 5px 0;
+}
+
+.important-box h3 {
+    color: #856404;
+    margin-bottom: 0.5rem;
+}
+
+.contact-info {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.contact-card {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    text-align: center;
+    flex: 1;
+    min-width: 250px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+.contact-card h3 {
+    color: #1a5fb4;
+    margin-bottom: 0.5rem;
+}
+
+.phone-number {
+    font-size: 1.4rem;
+    color: #e63946;
+    font-weight: bold;
+    margin: 0.5rem 0;
+}
+
+footer {
+    background-color: #1a5fb4;
+    color: white;
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+}
+
+.footer-text {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+    
+    .scams-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .contact-info {
+        flex-direction: column;
+    }
+}
